@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script>
+			var url='http://127.0.0.1:3000/Edit_a_get',
+				data={
+					page:0,
+					length:22
+				};
+			$.post(url,data,function(res){
+				console.log(res);
+			});
+		</script>
+	</body>
+</html>

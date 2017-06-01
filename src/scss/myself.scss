@@ -1,0 +1,243 @@
+$c_f:#fff;
+$c_shadow:#A1949B;
+$c_alert: #df7366;
+$c_red: #ef8376;
+$c_bl:#695765;
+$c_font:#2F2F4F;//深藏青色
+$c_d:#ddd;
+
+
+#myself {
+    position: relative;
+    .head.logined{
+        background: $c_shadow;
+    }
+    .head {
+        text-align: center;
+        padding: 25px 0;
+        .header-pic,.login-in{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 0 6px 1px $c_shadow;
+            vertical-align: bottom;
+            font-size: 1.6rem;
+        }
+        .login-in{
+            background: $c_shadow;
+            color: $c_f;     
+        }
+        .header-pic{
+            background: url(../../static/imgs/defaultHead.jpg);
+            background-size: 100%;
+            background-position: center;
+        }
+        .name{
+            font-size:1.6rem;
+            margin-top: 8px;
+            color:$c_f;
+            .nick{
+                display: inline-block;
+                position: relative;
+                .to-person-set{
+                    display: inline-block;
+                    position: absolute;
+                    right:-25px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    height: 15px;
+                    width:15px;
+                    background: url(../../static/imgs/self/right-white.png) center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+    .set{
+       position: absolute; 
+       top:18px;
+       right:18px;
+       width:25px;height:25px;
+       background:url(../../static/imgs/self/set.png) center;
+       background-size: 100%;
+    }
+}
+.my-lists{
+    margin-top: 20px;
+    li{
+        background: $c_f;
+        padding: 10px 12px 10px 36px;
+        font-size: 1.5rem;
+        color:$c_font;
+        border-top: 1px solid $c_d;
+        position: relative;
+        .right{
+            position: absolute;
+            right:20px;
+            top:50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            width:20px;
+            height: 20px;
+            background: url(../../static/imgs/self/to-right.png) center;
+            background-size: 100%;
+        }
+        .logo{
+            display: inline-block;
+            position: absolute;
+            width:20px;
+            height: 20px;
+            left:10px;
+            top:50%;
+            transform: translateY(-50%);
+            img{
+                width:100%;
+            }
+        }
+    }
+}
+#login-view{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:500;
+    overflow: hidden;
+    background: url(../../static/imgs/login/body.jpg);
+    background-size: cover;
+    background-position: center;
+    color:$c_f;
+    .header{
+        font-size: 3rem;
+        text-align: center;
+        padding-top: 30px;
+        font-family: cursive;
+        position: relative;
+        .back{
+            position: absolute;
+            right: 5px;
+            top:5px;
+            font-size:2rem;
+        }
+    }
+    .line{
+        position: relative;
+        margin: auto;
+        width:80%;
+        height:4px;
+        border-top: 1px solid rgba(192,192,192,0.35);
+        border-bottom: 1px solid rgba(192,192,192,0.35);
+        margin-top:2rem;
+    }
+    .line:before,.line:after{
+        content: '';
+        position: absolute;
+        top: -8px;
+        display: block;
+        width: 1px;
+        height: 21px;
+        background: rgba(192,192,192,0.35);
+    }
+    .line:after{
+        right:-1px;
+    }
+    .line:before{
+        left:-1px;
+    }
+    .ul-box{
+        text-align: center;
+        ul{
+            display: inline-block;
+            text-align: left;
+            margin-top: 30px;
+            width:68%;
+            li{
+                margin-top: 15px;
+                position: relative;
+                b.alert{
+                    position: absolute;
+                    right: -14px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                    font-size: 3.2rem;
+                    font-weight: bold;
+                    color: $c_alert;
+                    transition: all linear 0.2s;
+                    opacity: 0;
+                }
+                b.alert.s{opacity: 1;}
+                input,button{
+                    width:100%;
+                    box-sizing: border-box;
+                }
+                input.code{width:78px;}
+                button.getCode{
+                    width:118px;
+                    font-family: "microsoft yahei"
+                }
+                .agr{
+                    font-size:1.4rem;
+                    color:$c_alert;
+                }
+            }
+            li.switch{
+                font-size: 1.4rem;
+                color: $c_f;
+                font-family:"arial black";
+                font-weight: bold;
+                a{
+                    color: $c_red;
+                }
+            }
+            li.other-login{
+                margin-top: 110px;
+                height: 40px;
+                a{
+                    position: absolute;
+                    display: inline-block;
+                    width:40px;
+                    height: 40px;
+                    top:0;
+                }
+                a.wx{
+                    left:0;
+                    background: url(../../static/imgs/login/58pic_52c2b94489df0wx.png) no-repeat;
+                    background-size: 100%;
+                }
+                a.qq{
+                    left:50%;
+                    transform: translateX(-50%);
+                    background: url(../../static/imgs/login/58pic_52c2b94489df0qq.png) no-repeat;
+                    background-size: 100%;
+                }
+                a.wb{
+                    right:0;
+                    background: url(../../static/imgs/login/58pic_52c2b94489df0wb.png) no-repeat;
+                    background-size: 100%;
+                }
+                
+            }
+        }
+        .other-login-note{
+            position: relative;
+            top:-60px;
+            height: 1px;
+            background: rgba(192,192,192,0.35);
+            span{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                display: inline-block;
+                background: $c_bl;
+                width:100px;
+                border-radius: 5px;
+                padding: 3px 6px;
+            }
+        }
+    }
+}

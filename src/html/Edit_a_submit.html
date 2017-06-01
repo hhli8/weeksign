@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		<input type="text" placeholder="标题" class="title"/>
+		<div contenteditable="true" class="content">内容</div>
+		<button id="submit">提交</button>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script>
+			$('#submit').click(function(){
+				var url='http://127.0.0.1:3000/Edit_a_submit',
+					data={
+						title:$('.title').val(),
+						con:$('.content').html()
+					};
+				$.post(url,data,function(res){
+					if(res.suc){
+						alert('提交成功');
+					}else{
+						alert('提交失败');
+					}
+				});
+					
+			});
+		</script>
+	</body>
+</html>

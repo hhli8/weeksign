@@ -1,0 +1,122 @@
+//变量
+$c_f:#fff;
+$c_black:#000;
+$c_d:#ddd;
+$c_8:#888;
+$btn_r:#df7366;
+$btn_r_act:#ef8376;
+$c_f3:#f3f3f3;
+$c_3:#333;
+
+
+//************************
+html{
+    font-size:62.5%;
+//  /*默认是16px*/
+//  /*1.6rem==16px*/
+}
+html,body{
+    height: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote{
+    margin:0;
+    padding:0;
+    font-family: "microsoft yahei";
+}
+textarea,button{font-family: "microsoft yahei";}
+li {
+  list-style: none;
+}
+img{
+    vertical-align: bottom;
+}
+a{
+    text-decoration: none;
+    outline: none;
+    color:$c_black;
+}
+//按钮和input
+.ipt-n,.btn-r{
+    padding: 10px 15px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.4rem;
+    box-shadow: 2px 5px 7px $c_8;
+}
+.ipt-n{
+    border: 1px solid $c_d;
+}
+.btn-r{
+    border: 1px solid $btn_r;
+    background:$btn_r;
+    color:$c_f;
+    transition: all linear 0.3s;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.btn-r:active{
+    border: 1px solid $btn_r_act;
+    background: $btn_r_act;
+}
+.rt{float:right;}
+.lt{float:left;}
+.dn{display: none;}
+//下拉刷新
+#refresh{
+    position: absolute;
+    top:0;
+    width:100%;
+    overflow: hidden;
+    padding: 12px 8px 4px 8px;
+    box-sizing: border-box;
+    text-align: center;
+    background: $c_f3;
+    img{
+        width:20px;
+        height: 20px;
+    }
+}
+//返回
+
+///*省略号*/
+.ellipsis i{
+    display: inline-block;
+    width:3px;
+    height: 3px;
+    border-radius: 50%;
+    background: $c_3;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.badWarn,#prompt{
+    min-width:200px;
+    position: fixed;
+    font-size:1.4rem;
+    box-sizing: border-box;
+    text-align: center;
+    background:rgba(0,0,0,0.8);
+    color:$c_f;
+    top:30%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.badWarn{
+    line-height: 30px;
+    padding: 10px 15px;
+    z-index:1000;
+    border-radius: 10px;
+}
+//未启用
+#prompt{
+    border:1px solid $c_d;
+    border-radius: 6px;
+    padding: 12px;
+    display: none;
+}
+#prompt .title{
+    padding: 0 0 8px 0;
+    font-size: 1.6rem;
+}
+#prompt .yes{
+    margin-right: 10px;
+}

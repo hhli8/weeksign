@@ -1,0 +1,32 @@
+$c_f:#fff;
+.home{
+    ul{
+        z-index: 10;
+        padding: 8px; 
+        transform: translate3d(0px, 0px, 0px) translateZ(0px);
+       li{
+           margin-bottom: 8px;
+           background: $c_f;
+           border-radius: 5px;
+           padding: 6px 8px;
+           .title,.img{
+               display: inline-block;
+               vertical-align: top;
+           }
+           .title{
+               width:70%;
+               font-size:1.6rem;
+               box-sizing: border-box;
+               padding-right: 5px;
+           }
+           .img{
+                width:30%;
+                text-align: right;
+                img{
+                    max-width:100%;
+                } 
+           }
+       }
+    }
+}
+
